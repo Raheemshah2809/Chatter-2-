@@ -21,7 +21,6 @@ export default function Chats() {
 
     async function getFile(url) {
         let response = await fetch(url);
-        response.catch((e) => console.log(e));
         let data = await response.blob();
         return new File([data], "test.jpg", { type: 'image/jpeg' });
     }
